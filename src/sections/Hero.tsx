@@ -1,17 +1,20 @@
+// src/sections/Hero.tsx
+import generalInfo from "@/data/data";
 import { Button } from "@/components/ui/button";
+
+const hero = generalInfo.hero;
 
 export function Hero() {
   return (
     <section className="border-b">
-      <div className="mx-auto flex max-w-4xl flex-col gap-6 px-4 py-16">
+      <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-16">
         <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
-          Full-Stack Web, Mobile & AI Developer
+          {hero.tagline}
         </p>
-        <h1 className="text-3xl font-semibold md:text-5xl">
-          Elvan Eroglu – Full-Stack Developer & AI Integration Specialist
-        </h1>
-        <p className="max-w-2xl text-muted-foreground">
-          {/* Ici tu colles ton paragraphe d’intro depuis le PDF, version anglaise ou FR */}
+        <h1 className="text-3xl font-semibold md:text-5xl">{hero.name}</h1>
+        <p className="text-sm text-muted-foreground">{hero.location}</p>
+        <p className="max-w-2xl text-base text-muted-foreground">
+          {hero.description}
         </p>
         <div className="flex flex-wrap gap-3">
           <Button asChild>
