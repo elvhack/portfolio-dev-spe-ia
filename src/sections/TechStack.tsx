@@ -19,54 +19,67 @@ function PillList({ items }: { items: string[] }) {
 
 export function TechStack() {
   return (
-    <section className="border-b">
-      <div className="mx-auto max-w-5xl px-4 py-16">
-        <h2 className="mb-6 text-2xl font-semibold">Tech Stack</h2>
-        <div className="grid gap-4 md:grid-cols-2">
-          <Card className="bg-card">
-            <CardHeader>
-              <CardTitle className="text-base font-semibold">
-                Languages & Frameworks
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <PillList items={tech.languagesFrameworks} />
-            </CardContent>
-          </Card>
+    <section
+      id="tech-stack"
+      className="border-b border-border/60 bg-background/95 py-20 md:py-24"
+    >
+      <div className="mb-12 space-y-3 text-center">
+        <p className="mx-auto max-w-md text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+          Tech Stack
+        </p>
+        <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+          Modern tools across the full stack.
+        </h2>
+        <p className="mx-auto max-w-2xl text-sm text-muted-foreground">
+          From frontend to infrastructure and AI tooling, I use a pragmatic mix
+          of technologies depending on the problem to solve.
+        </p>
+      </div>
 
-          <Card className="bg-card">
-            <CardHeader>
-              <CardTitle className="text-base font-semibold">
-                Databases & Cloud
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <PillList items={tech.databasesCloud} />
-            </CardContent>
-          </Card>
+      <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
+        <Card className="rounded-2xl border border-border/60 bg-card/80 shadow-sm backdrop-blur">
+          <CardHeader>
+            <CardTitle className="text-sm font-semibold">
+              Languages &amp; Frameworks
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <PillList items={tech.languagesFrameworks} />
+          </CardContent>
+        </Card>
 
-          <Card className="bg-card">
-            <CardHeader>
-              <CardTitle className="text-base font-semibold">
-                AI & ML Tools
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <PillList items={tech.aiMLTools} />
-            </CardContent>
-          </Card>
+        <Card className="rounded-2xl border border-border/60 bg-card/80 shadow-sm backdrop-blur">
+          <CardHeader>
+            <CardTitle className="text-sm font-semibold">
+              Databases &amp; Cloud
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <PillList items={tech.databasesCloud} />
+          </CardContent>
+        </Card>
 
-          <Card className="bg-card">
-            <CardHeader>
-              <CardTitle className="text-base font-semibold">
-                DevOps & Misc
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <PillList items={tech.devOpsMisc} />
-            </CardContent>
-          </Card>
-        </div>
+        <Card className="rounded-2xl border border-border/60 bg-card/80 shadow-sm backdrop-blur">
+          <CardHeader>
+            <CardTitle className="text-sm font-semibold">
+              AI &amp; ML Tools
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <PillList items={tech.aiMLTools} />
+          </CardContent>
+        </Card>
+
+        <Card className="rounded-2xl border border-border/60 bg-card/80 shadow-sm backdrop-blur">
+          <CardHeader>
+            <CardTitle className="text-sm font-semibold">
+              DevOps &amp; Misc
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <PillList items={tech.devOpsMisc} />
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
